@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title></title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, intial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/animate.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome/css/all.css">
+<style type="text/css">
+
+/*.left_area h3{
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.left_area span{
+  color: #19B3D3;
+}*/
+.topdiv{
+	background-color: #001030;
+	height: 80px;
+	padding: 20px;
+}
+#logout{
+	text-decoration: none;
+	background-color: #BCDE85;
+	padding: 15px;
+	position: relative;
+	left: 500px;
+	border-radius: 20%;
+}
+.sideeach{
+	padding: 25px;
+	border-bottom: 1px solid white;
+	text-decoration: none;
+
+}
+#namearea{
+	color: #BCDE85;
+}
+
+.bartext{
+	color: #BCDE85;
+	margin-right: 15px;
+}
+
+.aref{
+	text-decoration: none;
+}
+</style>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row topdiv">
+		<div class="col-md">
+  <div id="namearea">
+    <h3>MED <span>24</span></h3>
+  </div>
+</div>
+  <div class="col-md">
+  	<div>
+    <a href="{{url_for('doc_logout')}}" id="logout">Logout</a>
+  </div>
+  </div>
+
+	</div>
+	<!-- 1st div -->
+	
+	<div class="row">
+		<div class="col-md-2" style="background-color:#001040; height: 700px;">
+			<div class="mobile_nav">
+  				<div class="nav_bar">
+    			<img src="images/bg1.jpg" width="100" height="100" alt="profile">
+  				</div>
+  				<div class="sidebar mt-4">
+  					<ul type="none">
+				    <li class="sideeach"><a href="#" class="aref"><i class="fa fa-desktop bartext" aria-hidden="true"></i><span>Dashboard</span></a></li>
+				    <li class="sideeach"><a href="{{url_for('doctor_profile')}}"class="aref"><i class="fa-solid fa-user-doctor bartext"></i><span>View Profile</span></a></li>
+				    <li class="sideeach"><a href="{{url_for('doctor_update')}}" class="aref"><i class="fa-solid fa-comments bartext"></i><span>Edit Profile</span></a></li>
+				    <li class="sideeach"><a href="#" class="aref"><i class="fa-solid fa-file-pen bartext"></i><span>Chat room</span></a></li>
+				    <li class="sideeach"><a href="#" class="aref"><i class="fas fa-info-circle bartext bartext"></i><span>About</span></a></li>
+				    <li class="sideeach"><a href="#" class="aref"><i class="fas fa-sliders-h bartext bartext"></i><span>Post Article</span></a></li>
+				</ul>
+  				</div>
+			</div>
+
+		</div>
+		<div class="col-md-8">
+	{% block doctor%}
+
+    {% endblock doctor%}
+
+		</div>
+	</div>
+<ul>
+	
+</ul>
+
+</div>  <!--container closing-->
+
+
+<!--js query this has to come first when using jquery-->
+	<script type="text/javascript" language="javascript" src="bootstrap/js/bootstrap.bundle.js"></script>
+
+
+	<!-- js internal -->
+	<script type="text/javascript" language="javascript">
+		//  check if dom is loaded
+		$(document).ready(function(){
+	
+		
+
+
+		}); // closing for the jquery
+	</script>
+	
+</body>
+</html>
